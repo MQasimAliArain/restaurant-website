@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savory Spoon | Reviews</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body class="reviews-page">
+  <header>
+    <nav class="navbar">
+     <div class="logo">
+        <img src="images/logo.png" alt="Savory Spoon Logo" />
+        Savory Spoon
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="reviews-section">
+      <h1>Customer Reviews</h1>
+      <div id="reviews-list" class="reviews-list">
+        <!-- Reviews dynamically inserted here -->
+      </div>
+
+      <div class="review-form-container">
+        <h2>Leave a Review</h2>
+        <form id="review-form">
+          <input type="text" id="reviewer-name" placeholder="Your Name" required />
+          <textarea id="review-text" placeholder="Your Review" required></textarea>
+          <button type="submit">Submit Review</button>
+        </form>
+        <p id="review-success" class="success-msg hidden"></p>
+<div id="reviews-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <p>&copy; Savory Spoon. All rights reserved.</p>
+    </div>
+    <button id="scrollToTop">↑</button>
+  </footer>
+</div>
+<!-- Modal -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <p id="modal-message"> sent successfully!</p>
+      <button id="modal-ok-btn">OK</button>
+    </div>
+</body>
+</html>

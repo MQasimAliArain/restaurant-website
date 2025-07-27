@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savory Spoon| Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body class="gallery-page">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Savory Spoon Logo" />
+        Savory Spoon
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <h1>Our Gallery</h1>
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)" />
+        <img src="images/gallery2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)" />
+        <img src="images/gallery3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)" />
+        <img src="images/gallery4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)" />
+        <img src="images/gallery5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)" />
+        <img src="images/gallery6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)" />
+        <img src="images/gallery7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)" />
+        <img src="images/gallery8.jpg" alt="Gallery Image 8" onclick="openLightbox(this)" />
+        <img src="images/gallery9.jpg" alt="Gallery Image 9" onclick="openLightbox(this)" />
+        <img src="images/gallery10.jpg" alt="Gallery Image 10" onclick="openLightbox(this)" />
+        <img src="images/gallery11.jpg" alt="Gallery Image 11" onclick="openLightbox(this)" />
+        <img src="images/gallery12.jpg" alt="Gallery Image 12" onclick="openLightbox(this)" />
+        <img src="images/gallery13.jpg" alt="Gallery Image 13" onclick="openLightbox(this)" />
+        <img src="images/gallery14.jpg" alt="Gallery Image 14" onclick="openLightbox(this)" />
+        <img src="images/gallery15.jpg" alt="Gallery Image 15" onclick="openLightbox(this)" />
+        <img src="images/gallery16.jpg" alt="Gallery Image 16" onclick="openLightbox(this)" />
+      </div>
+
+      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Lightbox Image" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <p>&copy; Savory Spoon. All rights reserved.</p>
+    </div>
+    <button id="scrollToTop">↑</button>
+  </footer>
+</body>
+</html>

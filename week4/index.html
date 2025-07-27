@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savory Spoon | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body class="home-page">
+  <div id="loader" class="loader"><div></div></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Savory Spoon Logo" />
+        Savory Spoon
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>Welcome to Savory Spoon</h1>
+        <p>Delicious memories, served daily.</p>
+        <a href="menu.html" class="btn">View Menu</a>
+        <a href="booking.html" class="btn-outline">Book Table</a>
+      </div>
+    </section>
+    <section class="featured">
+      <h2 class="section-title">Featured Dishes</h2>
+      <div class="dish-grid">
+        <div class="dish">
+          <img src="images/dish1.jpg" alt="Dish 1">
+          <div class="overlay">
+            <h3>Grilled Salmon</h3>
+            <p>Freshly grilled salmon with lemon butter sauce.</p>
+          </div>
+        </div>
+        <div class="dish">
+          <img src="images/dish2.jpg" alt="Dish 2">
+          <div class="overlay">
+            <h3>Spaghetti Carbonara</h3>
+            <p>Creamy pasta with pancetta and parmesan cheese.</p>
+          </div>
+        </div>
+        <div class="dish">
+          <img src="images/dish3.jpg" alt="Dish 3">
+          <div class="overlay">
+            <h3>Classic Cheeseburger</h3>
+            <p>Juicy beef patty with cheese, lettuce, and tomato.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hours-location">
+      <h2 class="section-title">Opening Hours & Location</h2>
+      <p>Mon - Sun: 11:00 AM - 10:00 PM</p>
+      <p>123 Food Street, Flavor Town</p>
+    </section>
+
+    <section class="testimonials">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="carousel">
+        <div class="testimonial active">
+          <p>"Best dining experience ever!"</p>
+          <h4>- Sarah K.</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Incredible flavors and ambiance!"</p>
+          <h4>- James T.</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Our favorite spot for date nights."</p>
+          <h4>- Linda M.</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <p>&copy; Savory Spoon. All rights reserved.</p>
+    </div>
+    <button id="scrollToTop">↑</button>
+  </footer>
+</body>
+</html>

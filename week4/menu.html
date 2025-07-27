@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savory Spoon | Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body class="menu-page">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Savory Spoon Logo" />
+        Savory Spoon
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <!-- ✅ Fixed: Added ID for JS targeting -->
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-section">
+      <h1>Our Menu</h1>
+      <div class="menu-filter">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="starters">Starters</button>
+        <button class="category-btn" data-category="mains">Mains</button>
+        <button class="category-btn" data-category="desserts">Desserts</button>
+        <button class="category-btn" data-category="drinks">Drinks</button>
+      </div>
+      <div class="menu-grid">
+        <!-- Starters -->
+        <div class="menu-item" data-category="starters"><img src="images/starter1.jpg" alt=""><h3>Bruschetta</h3><p>Grilled bread with tomatoes and basil</p><span>$5.99</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter2.jpg" alt=""><h3>Spring Rolls</h3><p>Crispy veggie rolls with dip</p><span>$4.49</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter3.jpg" alt=""><h3>Garlic Bread</h3><p>Toasted bread with garlic butter</p><span>$3.99</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter4.jpg" alt=""><h3>Stuffed Mushrooms</h3><p>Mushrooms with cheese filling</p><span>$6.29</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter5.jpg" alt=""><h3>Chicken Wings</h3><p>Spicy and crispy wings</p><span>$7.50</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter6.jpg" alt=""><h3>Nachos</h3><p>Tortilla chips with cheese and salsa</p><span>$5.49</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter7.jpg" alt=""><h3>Mini Quiche</h3><p>Egg and cheese filled pastry</p><span>$4.75</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter8.jpg" alt=""><h3>Onion Rings</h3><p>Deep-fried battered onions</p><span>$3.99</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter9.jpg" alt=""><h3>Caprese Skewers</h3><p>Mozzarella, tomato, and basil</p><span>$4.29</span></div>
+        <div class="menu-item" data-category="starters"><img src="images/starter10.jpg" alt=""><h3>Samosa</h3><p>Spicy potato-filled pastries</p><span>$2.99</span></div>
+
+        <!-- Mains -->
+        <div class="menu-item" data-category="mains"><img src="images/main1.jpg" alt=""><h3>Grilled Chicken</h3><p>With seasonal vegetables</p><span>$12.99</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main2.jpg" alt=""><h3>Beef Steak</h3><p>Juicy tenderloin with sauce</p><span>$18.99</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main3.jpg" alt=""><h3>Spaghetti Bolognese</h3><p>Classic Italian pasta dish</p><span>$10.99</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main4.jpg" alt=""><h3>Veggie Pizza</h3><p>Loaded with fresh vegetables</p><span>$9.99</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main5.jpg" alt=""><h3>Fish Tacos</h3><p>Crispy fish with salsa</p><span>$11.50</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main6.jpg" alt=""><h3>Butter Chicken</h3><p>Rich Indian curry with naan</p><span>$13.49</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main7.jpg" alt=""><h3>Veggie Burger</h3><p>Grilled patty with fries</p><span>$8.99</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main8.jpg" alt=""><h3>BBQ Ribs</h3><p>Slow-cooked with tangy sauce</p><span>$17.25</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main9.jpg" alt=""><h3>Lamb Chops</h3><p>Grilled with herbs</p><span>$16.49</span></div>
+        <div class="menu-item" data-category="mains"><img src="images/main10.jpg" alt=""><h3>Paneer Tikka</h3><p>Marinated grilled cottage cheese</p><span>$9.79</span></div>
+
+        <!-- Desserts -->
+        <div class="menu-item" data-category="desserts"><img src="images/dessert1.jpg" alt=""><h3>Chocolate Lava Cake</h3><p>With vanilla ice cream</p><span>$6.99</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert2.jpg" alt=""><h3>Tiramisu</h3><p>Italian coffee-flavored dessert</p><span>$5.49</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert3.jpg" alt=""><h3>Ice Cream Sundae</h3><p>Choice of flavors and toppings</p><span>$4.99</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert4.jpg" alt=""><h3>Brownie</h3><p>Warm with fudge sauce</p><span>$3.99</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert5.jpg" alt=""><h3>Cheesecake</h3><p>Rich and creamy</p><span>$5.25</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert6.jpg" alt=""><h3>Fruit Salad</h3><p>Fresh seasonal fruits</p><span>$3.49</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert7.jpg" alt=""><h3>Gulab Jamun</h3><p>Sweet syrupy dumplings</p><span>$2.99</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert8.jpg" alt=""><h3>Mousse</h3><p>Chocolate or strawberry</p><span>$4.75</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert9.jpg" alt=""><h3>Carrot Halwa</h3><p>Indian carrot dessert</p><span>$3.75</span></div>
+        <div class="menu-item" data-category="desserts"><img src="images/dessert10.jpg" alt=""><h3>Donut</h3><p>Frosted and filled options</p><span>$2.50</span></div>
+
+        <!-- Drinks -->
+        <div class="menu-item" data-category="drinks"><img src="images/drink1.jpg" alt=""><h3>Mojito</h3><p>Fresh lime, mint & soda</p><span>$3.99</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink2.jpg" alt=""><h3>Lemonade</h3><p>Classic chilled drink</p><span>$2.99</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink3.jpg" alt=""><h3>Milkshake</h3><p>Strawberry, vanilla or chocolate</p><span>$4.25</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink4.jpg" alt=""><h3>Iced Tea</h3><p>Sweet and chilled</p><span>$2.75</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink5.jpg" alt=""><h3>Espresso</h3><p>Rich and bold coffee</p><span>$2.50</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink6.jpg" alt=""><h3>Cappuccino</h3><p>Creamy foam-topped</p><span>$3.25</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink7.jpg" alt=""><h3>Hot Chocolate</h3><p>With whipped cream</p><span>$3.49</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink8.jpg" alt=""><h3>Fruit Smoothie</h3><p>Mango, banana or mix</p><span>$4.75</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink9.jpg" alt=""><h3>Green Tea</h3><p>Herbal and soothing</p><span>$2.25</span></div>
+        <div class="menu-item" data-category="drinks"><img src="images/drink10.jpg" alt=""><h3>Cold Coffee</h3><p>With ice and sugar</p><span>$3.75</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <p>&copy; Savory Spoon. All rights reserved.</p>
+    </div>
+    <button id="scrollToTop">↑</button>
+  </footer>
+</body>
+</html>

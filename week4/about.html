@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savory Spoon | About</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <style>
+    body.about-page {
+      background: url("images/bg-about.jpg") center/cover no-repeat fixed;
+      animation: fadeInBody 1s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: #222;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      background-color: transparent;
+      border: 2px solid white;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: red;
+      color: white;
+      border-color: red;
+      transform: scale(1.05);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 3px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 3rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.3s; }
+    section:nth-child(3) { animation-delay: 0.5s; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2, h3 {
+      color: #ffddc1;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    .chef-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .chef-profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: zoomIn 1s ease forwards;
+    }
+
+    .chef-profile:nth-child(2) { animation-delay: 0.2s; }
+    .chef-profile:nth-child(3) { animation-delay: 0.4s; }
+    .chef-profile:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .chef-profile:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 10px 25px rgba(255,255,255,0.15);
+    }
+
+    .chef-profile img {
+      width: 400px;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .chef-profile {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    footer {
+      background: #1B2E4B;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .footer-content {
+      max-width: 3000px;
+      margin: auto;
+    }
+
+    .footer-nav,
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a,
+    .social-media a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-nav a:hover,
+    .social-media a:hover {
+      text-decoration: underline;
+      color: #ffddc1;
+    }
+
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+
+    #scrollToTop:hover {
+      background-color: #e5533c;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="about-page">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Savory Spoon Logo" />
+        Savory Spoon
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <h1>Our Story</h1>
+      <p>Savory Spoon began not in a kitchen, but in a heart full of passion. In the bustling city of Lahore in 2010, a young culinary enthusiast, Adeel Khan, dreamed of a place where tradition and innovation could meet on a single plate.</p>
+      <p>What started as a family-run endeavor soon became a haven for food connoisseurs seeking soulful flavors and heartfelt hospitality. With each dish came stories — from secret spices passed down generations to fusion twists born from travel and curiosity.</p>
+      <p>We welcome you not just to dine, but to be part of our story — one rich with memories, devotion, and a promise to always serve food made with integrity and heart.</p>
+    </section>
+
+    <section class="chef-section">
+      <h2>Meet Our Chefs</h2>
+
+      <div class="chef-profile">
+        <img src="images/chef1.jpg" alt="Chef Adeel Khan">
+        <div>
+          <h3>Chef Adeel Khan</h3>
+          <p>Founder and Executive Chef, Adeel combines traditional Pakistani cuisine with French techniques. His philosophy? “Cook like you’re writing a poem.” Adeel turned a family recipe notebook into a culinary movement.</p>
+        </div>
+      </div>
+
+      <div class="chef-profile">
+        <img src="images/chef2.jpg" alt="Chef Fatima Zahra">
+        <div>
+          <h3>Chef Fatima Zahra</h3>
+          <p>Born and raised in Casablanca, Chef Fatima brings the vibrant soul of North African spices. Known for her dramatic saffron risotto and harissa-glazed lamb, she sees food as storytelling on a plate.</p>
+        </div>
+      </div>
+
+      <div class="chef-profile">
+        <img src="images/chef3.jpg" alt="Chef Abid Ali">
+        <div>
+          <h3>Chef Abid Ali</h3>
+          <p>Chef Bilal is a culinary poet from Istanbul whose passion lies in Ottoman-era flavors. His dishes echo Istanbul’s bazaars — bold, aromatic, and soul-warming. A storyteller at heart, he blends faith, history, and flavor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-section">
+      <h2>Our Mission</h2>
+      <p>At Savory Spoon, we are more than a restaurant — we are curators of culture, memories, and meaning. We serve not just food, but the warmth of family, the colors of tradition, and the aroma of innovation.</p>
+      <p>We are committed to excellence, sustainability, and inclusivity. Our kitchen is our canvas, and every meal we serve is crafted with reverence, soul, and a sprinkle of love.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <p>&copy; Savory Spoon. All rights reserved.</p>
+    </div>
+    <button id="scrollToTop">↑</button>
+  </footer>
+
+  <script>
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
